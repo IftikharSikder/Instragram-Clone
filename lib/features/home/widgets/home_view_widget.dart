@@ -1,15 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:untitled/common/widgets/custom_app_bar.dart';
+import 'package:untitled/features/home/controllers/home_controllers.dart';
+import 'package:untitled/features/home/widgets/story_view_widgets.dart';
 import 'package:untitled/util/dimensions.dart';
 import 'package:untitled/util/images.dart';
 
-class HomeViewWidget extends StatelessWidget {
+class HomeViewWidget extends StatefulWidget {
   const HomeViewWidget({super.key});
 
   @override
+  State<HomeViewWidget> createState() => _HomeViewWidgetState();
+}
+
+class _HomeViewWidgetState extends State<HomeViewWidget> {
+  HomeControllers homeControllers = Get.find<HomeControllers>();
+
+  @override
+  void initState() {
+    homeControllers.getStories();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(child: Column(children: [HomeAppbar()]));
+    return GetBuilder<HomeControllers>(
+      builder: (homeControllers) {
+        return SingleChildScrollView(
+          child: Column(
+            children: [
+              HomeAppbar(),
+              StoryViewWidgets(stories: homeControllers.stories),
+            ],
+          ),
+        );
+      },
+    );
   }
 }
 

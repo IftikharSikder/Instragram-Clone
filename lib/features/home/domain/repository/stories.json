@@ -1,0 +1,27 @@
+[
+  {
+    "imageUrl": "https://i.pravatar.cc/150?img=1",
+    "title": "Your Story",
+    "isMystory": true
+  },
+  {
+    "imageUrl": "https://i.pravatar.cc/150?img=2",
+    "title": "john_doe",
+    "isMystory": false
+  },
+  {
+    "imageUrl": "https://i.pravatar.cc/150?img=3",
+    "title": "emma_watson",
+    "isMystory": false
+  },
+  {
+    "imageUrl": "https://i.pravatar.cc/150?img=4",
+    "title": "alex_morgan",
+    "isMystory": false
+  },
+  {
+    "imageUrl": "https://i.pravatar.cc/150?img=5",
+    "title": "sarah_jones",
+    "isMystory": false
+  }
+]

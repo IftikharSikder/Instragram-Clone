@@ -12,4 +12,5 @@ class Images {
   static const String search = 'assets/images/icons/search.png';
   static const String person = 'assets/images/icons/person.jpg';
   static const String heart = 'assets/images/icons/heart.png';
+  static const String placeHolder = 'assets/images/placeholder.webp';
 }
