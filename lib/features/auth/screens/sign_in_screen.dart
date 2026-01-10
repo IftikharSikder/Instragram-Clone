@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:untitled/common/widgets/custom_button.dart';
 import 'package:untitled/common/widgets/custom_text_field.dart';
+import 'package:untitled/helper/route_helper.dart';
 import 'package:untitled/util/dimensions.dart';
 import 'package:untitled/util/images.dart';
 import 'package:untitled/util/styles.dart';
@@ -14,6 +15,7 @@ class SignInScreen extends StatelessWidget {
     double screenHeight = Get.height;
     double screenWidth = Get.width;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         height: screenHeight,
         width: double.infinity,
@@ -24,16 +26,16 @@ class SignInScreen extends StatelessWidget {
             colors: [Color(0xFF833AB4), Color(0xFFF77737), Color(0xFFFCAF45)],
           ),
         ),
-        child: SingleChildScrollView(
-          child: Stack(
-            children: [
-              Center(
-                child: Padding(
+        child: Column(
+          children: [
+            Expanded(
+              child: Center(
+                child: SingleChildScrollView(
                   padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtremeLarge),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
                     children: [
+                      SizedBox(height: Dimensions.paddingSizeDefault),
                       Image.asset(Images.logo_with_name, width: screenWidth * .4, height: screenWidth * .4),
                       SizedBox(height: Dimensions.paddingSizeLarge),
 
@@ -51,7 +53,13 @@ class SignInScreen extends StatelessWidget {
                       ),
                       SizedBox(height: Dimensions.paddingSizeDefault),
 
-                      CustomButton(buttonText: "log_in".tr, buttonColor: Colors.blue, onTap: () {}),
+                      CustomButton(
+                        buttonText: "log_in".tr,
+                        buttonColor: Colors.blue,
+                        onTap: () {
+                          Get.offAllNamed(RouteHelper.home);
+                        },
+                      ),
                       SizedBox(height: Dimensions.paddingSizeExtremeLarge),
 
                       Row(
@@ -64,43 +72,42 @@ class SignInScreen extends StatelessWidget {
                           Expanded(child: DividerWidget()),
                         ],
                       ),
-                      SizedBox(height: Dimensions.paddingSizeExtremeLarge),
+                      SizedBox(height: Dimensions.paddingSizeDefault),
 
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("log_in_with_facebook".tr, style: robotoMedium),
-                          SizedBox(height: Dimensions.paddingSizeSmall),
-
-                          Image.asset(Images.facebook, width: screenWidth * .04, height: screenWidth * .04),
+                          SizedBox(width: Dimensions.paddingSizeSmall),
+                          Image.asset(Images.facebook, width: screenWidth * .045, height: screenWidth * .045),
                         ],
                       ),
+                      SizedBox(height: Dimensions.paddingSizeDefault),
                     ],
                   ),
                 ),
               ),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Column(
-                  children: [
-                    Expanded(child: DividerWidget()),
-                    SizedBox(height: Dimensions.paddingSizeExtremeLarge),
-
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("dont_have_an_acount?".tr, style: robotoMedium),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text("sign_up".tr, style: robotoMedium),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtremeLarge, vertical: Dimensions.paddingSizeDefault),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  DividerWidget(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("dont_have_an_acount?".tr, style: robotoMedium),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text("sign_up".tr, style: robotoMedium),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
