@@ -1,4 +1,12 @@
 {
   "app_name": "ইনস্টাগ্রাম",
-  "select_language": "ভাষা নির্বাচন করুন"
+  "select_language": "ভাষা নির্বাচন করুন",
+  "phone_username_or_email": "ফোন নম্বর, ইউজারনেম বা ইমেইল ঠিকানা",
+  "password": "পাসওয়ার্ড",
+  "log_in": "লগ ইন",
+  "forgotten_password": "পাসওয়ার্ড ভুলে গেছেন?",
+  "or": "অথবা",
+  "dont_have_an_acount": "আপনার কোনো অ্যাকাউন্ট নেই?",
+  "sign_up": "নতুন অ্যাকাউন্ট করুন",
+  "log_in_with_facebook": "ফেসবুক দিয়ে লগ ইন করুন"
 }

@@ -1,4 +1,12 @@
 {
   "app_name": "Instagram",
-  "select_language": "Select Language"
+  "select_language": "Select Language",
+  "phone_username_or_email": "Phone number, username or email address",
+  "password": "Password",
+  "log_in": "Log In",
+  "forgotten_password": "Forgotten Password?",
+  "or": "OR",
+  "dont_have_an_acount": "Dont have an account?",
+  "sign_up": "Sign Up",
+  "log_in_with_facebook": "Log In With Facebook"
 }
