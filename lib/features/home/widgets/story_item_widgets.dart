@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/features/home/domain/models/store_model.dart';
+import 'package:untitled/features/home/domain/models/story_model.dart';
 import 'package:untitled/helper/validator.dart';
 import 'package:untitled/util/dimensions.dart';
 import 'package:untitled/util/images.dart';

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:untitled/features/home/domain/models/store_model.dart';
+import 'package:untitled/features/home/domain/models/story_model.dart';
 import 'package:untitled/features/home/domain/repository/home_repository_interface.dart';
 
 class HomeRepository implements HomeRepositoryInterface {

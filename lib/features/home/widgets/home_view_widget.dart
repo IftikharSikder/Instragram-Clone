@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:untitled/common/widgets/custom_app_bar.dart';
 import 'package:untitled/features/home/controllers/home_controllers.dart';
 import 'package:untitled/features/home/widgets/story_view_widgets.dart';
+import 'package:untitled/features/posts/controllers/post_controller.dart';
+import 'package:untitled/features/posts/widgets/post_list_widget.dart';
 import 'package:untitled/util/dimensions.dart';
 import 'package:untitled/util/images.dart';
 
@@ -15,10 +17,12 @@ class HomeViewWidget extends StatefulWidget {
 
 class _HomeViewWidgetState extends State<HomeViewWidget> {
   HomeControllers homeControllers = Get.find<HomeControllers>();
+  PostController postControllers = Get.find<PostController>();
 
   @override
   void initState() {
     homeControllers.getStories();
+    postControllers.getPosts();
     super.initState();
   }
 
@@ -26,13 +30,16 @@ class _HomeViewWidgetState extends State<HomeViewWidget> {
   Widget build(BuildContext context) {
     return GetBuilder<HomeControllers>(
       builder: (homeControllers) {
-        return SingleChildScrollView(
-          child: Column(
-            children: [
-              HomeAppbar(),
-              StoryViewWidgets(stories: homeControllers.stories),
-            ],
-          ),
+        return GetBuilder<PostController>(
+          builder: (postControllers) {
+            return CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(child: HomeAppbar()),
+                SliverToBoxAdapter(child: StoryViewWidgets(stories: homeControllers.stories)),
+                PostListWidget(posts: postControllers.postList),
+              ],
+            );
+          },
         );
       },
     );
@@ -46,7 +53,8 @@ class HomeAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomAppBar(
       leadingIcon: Icon(Icons.add, color: Colors.white, size: 30),
-      centerWidget: Text("app_name".tr, style: TextStyle(color: Colors.white)),
+      //centerWidget: Text("app_name".tr, style: TextStyle(color: Colors.white)),
+      centerWidget: Image.asset(Images.appName, width: Get.width / 3),
       actionWidget: [
         Stack(
           children: [

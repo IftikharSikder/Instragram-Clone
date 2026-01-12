@@ -4,6 +4,7 @@ class Images {
   static const String bangla = 'assets/images/english.webp';
   static const String logo_with_name = 'assets/images/logo_with_name.png';
   static const String facebook = 'assets/images/facebook.png';
+  static const String appName = 'assets/images/app_name.png';
 
   //icons
   static const String home = 'assets/images/icons/home.png';

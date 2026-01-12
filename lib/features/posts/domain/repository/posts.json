@@ -1,0 +1,156 @@
+{
+  "posts": [
+    {
+      "profile_image": "https://i.pravatar.cc/150?img=11",
+      "post_image": "https://picsum.photos/seed/post1/600/600",
+      "name": "john_doe",
+      "post_type": "normal",
+      "caption_value": "Blinding Lights • The Weeknd",
+      "post_caption": "Late night drives hit different 🚗✨",
+      "total_likes": 12450,
+      "total_comments": 342,
+      "total_shares": 89,
+      "comments": [
+        {
+          "username": "emma_w",
+          "comment": "This vibe is unreal"
+        }
+      ],
+      "is_verified": true,
+      "is_followable": false
+    },
+    {
+      "profile_image": "https://i.pravatar.cc/150?img=21",
+      "post_image": "https://picsum.photos/seed/post2/600/600",
+      "name": "fit_life_daily",
+      "post_type": "sponsored",
+      "caption_value": "Sponsored",
+      "post_caption": "Fuel your workouts the smart way",
+      "total_likes": 8930,
+      "total_comments": 210,
+      "total_shares": 45,
+      "comments": [
+        {
+          "username": "gym_buddy",
+          "comment": "Need to try this"
+        }
+      ],
+      "is_verified": false,
+      "is_followable": true
+    },
+    {
+      "profile_image": "https://i.pravatar.cc/150?img=32",
+      "post_image": "https://picsum.photos/seed/post3/600/600",
+      "name": "travel_soul",
+      "post_type": "normal",
+      "caption_value": "Golden Hour • JVKE",
+      "post_caption": "Chasing sunsets around the world",
+      "total_likes": 17800,
+      "total_comments": 560,
+      "total_shares": 134,
+      "comments": [
+        {
+          "username": "roadtrip_diary",
+          "comment": "This is dreamy"
+        }
+      ],
+      "is_verified": true,
+      "is_followable": true
+    },
+    {
+      "profile_image": "https://i.pravatar.cc/150?img=44",
+      "post_image": "https://picsum.photos/seed/post4/600/600",
+      "name": "tech_world",
+      "post_type": "sponsored",
+      "caption_value": "Sponsored",
+      "post_caption": "Meet the smartphone that changes everything 🚀",
+      "total_likes": 21400,
+      "total_comments": 720,
+      "total_shares": 310,
+      "comments": [
+        {
+          "username": "flutter_dev",
+          "comment": "That display looks insane 🔥"
+        }
+      ],
+      "is_verified": true,
+      "is_followable": true
+    },
+    {
+      "profile_image": "https://i.pravatar.cc/150?img=55",
+      "post_image": "https://picsum.photos/seed/post5/600/600",
+      "name": "foodie_corner",
+      "post_type": "normal",
+      "caption_value": "Sugar • Maroon 5",
+      "post_caption": "Because desserts make life sweeter 🍰",
+      "total_likes": 9650,
+      "total_comments": 287,
+      "total_shares": 72,
+      "comments": [
+        {
+          "username": "hungry_now",
+          "comment": "Saving this recipe"
+        }
+      ],
+      "is_verified": false,
+      "is_followable": true
+    },
+    {
+      "profile_image": "https://i.pravatar.cc/150?img=63",
+      "post_image": "https://picsum.photos/seed/post6/600/600",
+      "name": "fashion_hub",
+      "post_type": "sponsored",
+      "caption_value": "Sponsored",
+      "post_caption": "Summer fits you’ll love",
+      "total_likes": 14320,
+      "total_comments": 401,
+      "total_shares": 95,
+      "comments": [
+        {
+          "username": "style_queen",
+          "comment": "Obsessed with this look"
+        }
+      ],
+      "is_verified": false,
+      "is_followable": true
+    },
+    {
+      "profile_image": "https://randomuser.me/api/portraits/men/10.jpg",
+      "post_image": "https://picsum.photos/seed/post7/600/600",
+      "name": "night_vibes",
+      "post_type": "normal",
+      "caption_value": "Stay • The Kid LAROI",
+      "post_caption": "Midnight thoughts and loud music",
+      "total_likes": 22100,
+      "total_comments": 680,
+      "total_shares": 198,
+      "comments": [
+        {
+          "username": "late_night",
+          "comment": "Relatable 😌"
+        }
+      ],
+      "is_verified": true,
+      "is_followable": false
+    },
+    {
+      "profile_image": "https://randomuser.me/api/portraits/men/32.jpg",
+      "post_image": "https://picsum.photos/seed/post8/600/600",
+      "name": "eco_living",
+      "post_type": "sponsored",
+      "caption_value": "Sponsored",
+      "post_caption": "Small changes can make a big impact 🌱",
+      "total_likes": 7520,
+      "total_comments": 190,
+      "total_shares": 61,
+      "comments": [
+        {
+          "username": "green_earth",
+          "comment": "Love this message"
+        }
+      ],
+      "is_verified": false,
+      "is_followable": true
+    }
+  ]
+}
