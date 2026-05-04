@@ -25,10 +25,13 @@ class PostHeader extends StatelessWidget {
         children: [
           Row(
             children: [
-              PostProfileImageCard(isPostTypeNormal: postTypeIsNormal, postImageUrl: post.profileImage),
+              PostProfileImageCard(
+                isPostTypeNormal: postTypeIsNormal,
+                postImageUrl: post.profileImage,
+              ),
               SizedBox(width: Dimensions.paddingSizeDefault),
               SizedBox(
-                height: 50,
+                height: 55,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeExtraSmall),
                   child: Column(
@@ -39,7 +42,11 @@ class PostHeader extends StatelessWidget {
                               children: [
                                 Text(post.name, style: TextStyle(color: Colors.white)),
                                 SizedBox(width: Dimensions.paddingSizeExtraSmall),
-                                Icon(Icons.verified, color: Colors.blue, size: Dimensions.fontSizeLarge),
+                                Icon(
+                                  Icons.verified,
+                                  color: Colors.blue,
+                                  size: Dimensions.fontSizeLarge,
+                                ),
                               ],
                             )
                           : Text(post.name, style: TextStyle(color: Colors.white)),
@@ -66,7 +73,13 @@ class PostHeader extends StatelessWidget {
                     post.isFollowable
                         ? Padding(
                             padding: EdgeInsets.only(right: Dimensions.paddingSizeSmall),
-                            child: CustomButton(onTap: () {}, buttonText: "follow".tr, width: Get.width * .2, borderColor: Colors.white, height: 40),
+                            child: CustomButton(
+                              onTap: () {},
+                              buttonText: "follow".tr,
+                              width: Get.width * .2,
+                              borderColor: Colors.white,
+                              height: 40,
+                            ),
                           )
                         : SizedBox(),
                     Icon(Icons.more_vert, color: Colors.white),

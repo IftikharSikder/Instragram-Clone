@@ -36,10 +36,17 @@ class SignInScreen extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       SizedBox(height: Dimensions.paddingSizeDefault),
-                      Image.asset(Images.logo_with_name, width: screenWidth * .4, height: screenWidth * .4),
+                      Image.asset(
+                        Images.logo_with_name,
+                        width: screenWidth * .4,
+                        height: screenWidth * .4,
+                      ),
                       SizedBox(height: Dimensions.paddingSizeLarge),
 
-                      CustomTextField(hintText: 'phone_username_or_email'.tr, hintColor: Theme.of(context).hintColor),
+                      CustomTextField(
+                        hintText: 'phone_username_or_email'.tr,
+                        hintColor: Theme.of(context).hintColor,
+                      ),
                       CustomTextField(
                         hintText: 'password'.tr,
                         hintColor: Theme.of(context).hintColor,
@@ -79,7 +86,11 @@ class SignInScreen extends StatelessWidget {
                         children: [
                           Text("log_in_with_facebook".tr, style: robotoMedium),
                           SizedBox(width: Dimensions.paddingSizeSmall),
-                          Image.asset(Images.facebook, width: screenWidth * .045, height: screenWidth * .045),
+                          Image.asset(
+                            Images.facebook,
+                            width: screenWidth * .045,
+                            height: screenWidth * .045,
+                          ),
                         ],
                       ),
                       SizedBox(height: Dimensions.paddingSizeDefault),
@@ -89,7 +100,10 @@ class SignInScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtremeLarge, vertical: Dimensions.paddingSizeDefault),
+              padding: EdgeInsets.symmetric(
+                horizontal: Dimensions.paddingSizeExtremeLarge,
+                vertical: Dimensions.paddingSizeDefault,
+              ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -97,7 +111,7 @@ class SignInScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("dont_have_an_acount?".tr, style: robotoMedium),
+                      Text("Dont have an account?".tr, style: robotoMedium),
                       TextButton(
                         onPressed: () {},
                         child: Text("sign_up".tr, style: robotoMedium),
